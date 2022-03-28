@@ -39,7 +39,7 @@
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
- <script>
+ <script> //Start of script
   var docMod = document.lastModified; // gets last modified date and time of the index.html file
   console.log("This file last modified  " + docMod); // displays last modified date and time in the javascipt browser console 
 
@@ -101,6 +101,12 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
+        
+        var canvas2=document.getElementById("myCanvas2"); //Second canvas identified 
+        var context2=canvas2.getContext("2d"); //Inserted ability to draw onto second canvas
+         
+        var imageData = context.getImageData (0, 0, 600, 500); //Image data variable 
+        var data = imageData.data; //Calls pixel data from selected image
           
           
           
