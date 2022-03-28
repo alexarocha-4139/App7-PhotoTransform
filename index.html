@@ -141,21 +141,32 @@
     <div data-role="header">
     <h1>Primary Colors</h1></div><!-- /header -->
     <div data-role="content">	
-      <h2>Push button to take picture.</h2>
+      <h2>Push button to take picture.</h2> <!--User image prompt-->
       <div>
-        Press orange button to create or choose image file:
+        Press orange button to create or choose image file: <!--Second user image prompt-->
         <input type="file" id="fileInput" STYLE="background-color: #FF6600;">
       </div>
-      <div id="messageDisplayArea"></div>
+      <div id="messageDisplayArea"></div> <!--"You picked an image!" or "File not supported!-->
       
+     <!--First canvas-->
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
-      </script>
+      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */ //Start of script
+        var canvas = document.getElementById('myCanvas'); //Canvas variable
+        var context = canvas.getContext("2d"); //Calls canvas context
+        context.font = '20pt Calibri'; //Selected font
+        context.fillStyle = "black"; //Color of font
+        context.fillText("Original image will go here", 10, 20); //Text displayed/dimensions
+      </script> <!--End of script-->
+     
+     <!--Second canvas-->
+     <canvas id="myCanvas2" width=600 height= 500 style="border:1px solid #d3d3d3;"></canvas>
+     <script> //Start of canvas script 
+        var canvas2 = document.getElementById("myCanvas2"); //Second canvas variable 
+        var context2 = canvas2.getContext("2d"); //Calls 2d context 
+        context2.font = '20pt Times New Roman'; //Font for second canvas
+        context2.fillStyle = "black"; //Color of font
+        context2.fillText("Transformed image will go here", 10, 20); //Text displayed/dimensions
+     </script> <!--End of script-->
 
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
