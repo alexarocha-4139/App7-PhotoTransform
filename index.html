@@ -107,10 +107,16 @@
          
         var imageData = context.getImageData (0, 0, 600, 500); //Image data variable 
         var data = imageData.data; //Calls pixel data from selected image
+        
+         
+        for(var i=0, n=data.length; i < n; i+=4){ //Repeated loop throughout image + selection for blue 
+         //Lowers red and green intensities to 0
+           data [i] = 0; //Red set to 0
+           data [i+1] = 0; //Green set to 0
+         
+        }
           
-          
-          
-          
+        context2.putImageData(imageData, 0 , 0); //Runs selected image  
         } // end of img.onload
         
         img.src = reader.result;
@@ -125,7 +131,9 @@
     } // end of the else statement if file in NOT an image
   }); // end of the fileInput.addEventListener function
  } // end of the window.onload function
- </script>
+  
+ </script> <!--End of script-->
+  
  </head>
 
  <body>
